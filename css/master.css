@@ -1,0 +1,1648 @@
+:root {
+  --main--p--color: rgba(255, 255, 255, 0.5);
+}
+* {
+  box-sizing: border-box;
+}
+::-webkit-scrollbar {
+  background-color: transparent;
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 5px;
+}
+body {
+  background-color: #171515;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 0.8px;
+}
+h2 {
+  font-size: 40px;
+  margin: 0 0 8px;
+}
+h4 {
+  font-weight: 500;
+}
+button {
+  outline: none;
+}
+.container {
+  width: 1170px;
+  margin: auto;
+}
+/* Start Header */
+.header-overlay {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  z-index: 7;
+}
+.header {
+  position: relative;
+  background-image: url("../imgs/slider/slide1.png");
+  background-size: cover;
+  min-height: 100vh;
+  width: 100%;
+  z-index: 8;
+}
+.header .navbars {
+  position: relative;
+}
+.header .search-navbar {
+  position: fixed;
+  background-color: #171515;
+  width: 100%;
+  height: 72px;
+  line-height: 72px;
+  text-align: center;
+  z-index: 8;
+  top: -72px;
+}
+.header .search-navbar.show {
+  top: 0;
+  transition: all 0.3s linear;
+}
+.header .search-navbar.hide {
+  top: -72px;
+  transition: all 0.3s linear;
+}
+.header .search-navbar input {
+  width: 800px;
+  height: 40px;
+  padding-left: 20px;
+  background-color: #000;
+  color: #fff;
+  outline: none;
+  border: none;
+  border-radius: 30px;
+}
+.header .search-navbar span:first-of-type {
+  margin-left: -90px;
+  letter-spacing: 1.3px;
+  font-family: arial, tahoma;
+  cursor: pointer;
+}
+.header .search-navbar span:last-of-type {
+  font-size: 20px;
+  margin-left: 60px;
+  font-weight: 600;
+  line-height: 40px;
+  color: #888;
+}
+.header .search-navbar span:last-of-type:hover {
+  color: red;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.navbar {
+  position: fixed;
+  width: 100%;
+  height: 72px;
+  line-height: 72px;
+  z-index: 7;
+  transition: all 0.5s linear;
+}
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 40px;
+  color: rgba(255, 255, 255, 0.5);
+}
+.nav-bar span:hover {
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.8s;
+}
+.nav-bar .fa-apple {
+  color: #fff;
+  width: 20px;
+  height: 20px;
+}
+
+/* Slider */
+.all-slider {
+  display: flex;
+  padding-top: 23vh;
+}
+.all-slider .slider {
+  position: relative;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.all-slider .slider .slide {
+  position: absolute;
+  display: none;
+}
+.all-slider .slider .slide.active {
+  display: block;
+}
+.all-slider .slider h1 {
+  font-size: 50px;
+  margin-bottom: -5px;
+}
+.all-slider .slider h2 {
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+.all-slider .slider p {
+  width: 469px;
+  line-height: 1.6;
+  letter-spacing: 0.4px;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 30px 0 48px;
+}
+.all-slider .slider button {
+  width: 200px;
+  height: 65px;
+  border: 1px solid #fff;
+  border-radius: 30px;
+  outline: none;
+  font-size: 20px;
+  background: none;
+  color: #fff;
+}
+.all-slider .slider button:hover {
+  font-weight: bold;
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+  transition: all 0.2s linear;
+  -webkit-animation: scale-down-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    both;
+  animation: scale-down-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+@-webkit-keyframes scale-down-center {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+@keyframes scale-down-center {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+.all-slider .slider .direction {
+  margin-top: 18vh;
+  margin-left: 1.5rem;
+}
+.all-slider .slider .direction .fa {
+  font-size: 25px;
+  font-weight: 700;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  opacity: 0.5;
+  border: 1px solid #fff;
+  border-radius: 50%;
+}
+.all-slider .slider .direction .fa:hover {
+  background-color: #fff;
+  color: #000;
+  opacity: 1;
+  cursor: pointer;
+  -webkit-animation: scale-down-center 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    both;
+  animation: scale-down-center 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+.all-slider .slider .direction i:first-of-type {
+  margin-right: 45px;
+}
+
+/* Start Slider 1*/
+.all-slider .slider .num1 {
+  transition: all 1.5s linear;
+  -webkit-animation: slide-in-left 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    both;
+  animation: slide-in-left 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  overflow: hidden;
+}
+@-webkit-keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+/* Start Slider 2*/
+.all-slider .slider .slide.num2 {
+  right: 0;
+  transition: all 1.5s linear;
+  -webkit-animation: slide-in-right 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    both;
+  animation: slide-in-right 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  overflow: hidden;
+}
+@-webkit-keyframes slide-in-right {
+  0% {
+    -webkit-transform: translateX(500px);
+    transform: translateX(500px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-right {
+  0% {
+    -webkit-transform: translateX(500px);
+    transform: translateX(500px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+/* Start Slider 3*/
+.all-slider .slider .num3 {
+  transition: all 1.5s linear;
+  -webkit-animation: slide-in-left 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    both;
+  animation: slide-in-left 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  overflow: hidden;
+}
+/* Start Slider 4 */
+.all-slider .slider .slide.num4 {
+  margin-top: -5vh;
+  left: 30%;
+  text-align: center;
+  transition: all 1.5s linear;
+  -webkit-animation: slide-in-bottom 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    both;
+  animation: slide-in-bottom 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+.all-slider .slider .num4 button {
+  margin-top: 30px;
+}
+.all-slider .slider .num4 .direction {
+  margin-top: 41vh;
+  margin-left: -0.5rem;
+}
+@-webkit-keyframes slide-in-bottom {
+  0% {
+    -webkit-transform: translateY(-500px);
+    transform: translateY(-500px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-bottom {
+  0% {
+    -webkit-transform: translateY(-500px);
+    transform: translateY(-500px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+/* End Header */
+
+/* Start Devices */
+.devices-overlay {
+  height: 65vh;
+  width: 100%;
+  z-index: 2;
+  overflow: hidden;
+}
+.devices {
+  text-align: center;
+  padding: 100px 0;
+  z-index: 3;
+  overflow: hidden;
+}
+.devices .part1 {
+  opacity: 4;
+  transform: translateY(-250px);
+  transition: all 1.5s ease;
+}
+.devices .part1.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+.devices .part1 h2 {
+  font-weight: 500;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.2;
+}
+.devices .part1 p {
+  line-height: 1.6;
+  margin-bottom: 50px;
+  color: var(--main--p--color);
+}
+.devices .part2 {
+  display: flex;
+  justify-content: space-around;
+  transform: translateY(300px);
+  opacity: 0;
+  transition: all 1.5s ease;
+}
+.devices .part2.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+.devices .part2 .device .title {
+  font-size: 20px;
+  width: 180px;
+  height: 180px;
+  border-radius: 30px;
+  line-height: 180px;
+  background-color: #000;
+  cursor: pointer;
+}
+.devices .part2 .device .title-image {
+  background-color: #fff;
+  width: 40px;
+  height: 40px;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 50%;
+  margin: -20px auto 0;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+}
+.devices .part2 .device .title-image:hover,
+.devices .part2 .device .title:hover + .title-image {
+  width: 180px;
+  height: 180px;
+  line-height: 180px;
+  border-radius: 30px;
+  transform: translateY(-160px);
+}
+/* End Devices */
+
+/* Start Iphone 1 */
+.iphone {
+  position: relative;
+  height: 50vh;
+  width: 100%;
+  background-image: url("../imgs/iphone/main-background.jpg");
+  background-position: center;
+  background-size: cover;
+  z-index: 3;
+  overflow: hidden;
+}
+.iphone-overlay {
+  position: absolute;
+  background-image: linear-gradient(to bottom, #000, #171515, transparent);
+  height: 55vh;
+  width: 100%;
+  z-index: 2;
+}
+.iphone .iphone-device {
+  position: relative;
+}
+.iphone .iphone-device .overlay {
+  position: absolute;
+  width: 100%;
+  height: 16vh;
+  margin-top: -80px;
+  z-index: 4;
+}
+.iphone .iphone-device .part1 {
+  margin-bottom: 48px;
+  transform: translateY(-105px);
+  opacity: 0;
+}
+.iphone .iphone-device .part1.active {
+  transform: translateY(0);
+  opacity: 1;
+  transition: all 1.5s ease;
+}
+.iphone .iphone-device .part1 h1 {
+  font-size: 120px;
+  font-weight: 700;
+  margin-bottom: 0;
+  text-align: center;
+}
+.iphone .iphone-device .part1 p {
+  font-size: 30px;
+  font-weight: bold;
+  color: var(--main--p--color);
+  margin: 0 0 8px;
+  text-align: center;
+}
+.iphone .iphone-device .part2 {
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(50px);
+  opacity: 0;
+  transition: all 1.5s ease;
+}
+.iphone .iphone-device .part2.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+.iphone .iphone-device .part2 .media {
+  display: flex;
+}
+.iphone .iphone-device .part2 .media i {
+  font-size: 32px;
+  line-height: 120px;
+  margin-right: 17px;
+}
+.iphone .iphone-device .part2 .media h5 {
+  font-size: 20px;
+  font-weight: 500;
+  text-align: left;
+  margin-bottom: 8px;
+}
+.iphone .iphone-device .part2 .media p {
+  margin: 0;
+  color: var(--main--p--color);
+}
+/* End Iphone 1 */
+
+/* Start Iphone 2 */
+.iphone2 {
+  background-image: url("../imgs/iphone/take-look-backgrounnd2.png");
+  background-size: cover;
+  background-position: top;
+  width: 100%;
+  height: 61.3vh;
+  overflow: hidden;
+}
+.iphone2 .iphone2-body {
+  padding-top: 130px;
+  display: flex;
+  justify-content: center;
+}
+.iphone2 .iphone2-body .part1 {
+  width: 540px;
+  padding: 0 15px;
+  transform: translateX(-587px);
+  opacity: 0;
+  transition: all 1.5s ease;
+}
+.iphone2 .iphone2-body .part1.active {
+  transform: translateX(0);
+  opacity: 1;
+}
+.iphone2 .iphone2-body h2 {
+  font-size: 72px;
+  font-weight: 700;
+}
+.iphone2 .iphone2-body p {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--main--p--color);
+  margin: 0 0 8px;
+}
+.iphone2 .iphone2-body button {
+  width: 220px;
+  height: 65px;
+  margin: 48px 0;
+  border: 1px solid #fff;
+  border-radius: 30px;
+  font-size: 20px;
+  background: none;
+  color: #fff;
+}
+.iphone2 .iphone2-body button:hover {
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+  transition: all 0.2s linear;
+  -webkit-animation: scale-down-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    both;
+  animation: scale-down-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+.iphone2 .iphone2-body img {
+  width: 570px;
+  height: 413px;
+  transform: translateY(31px);
+}
+/* End Iphone 2 */
+
+/* Start Iphone 3 */
+.iphone3 {
+  background-image: url("../imgs/iphone/camers-background.png");
+  background-size: cover;
+  background-position: top;
+  width: 100%;
+  height: 541px;
+  display: flex;
+  overflow: hidden;
+}
+.iphone3 .part1 {
+  transform: translateX(-1117px);
+  opacity: 0;
+  transition: all 1.5s ease;
+}
+.iphone3 .part1.active {
+  transform: translateX(0);
+  opacity: 1;
+}
+.iphone3 h2 {
+  font-size: 79.5px;
+}
+.iphone3 h2::first-line {
+  color: var(--main--p--color);
+  margin-bottom: 8px;
+}
+/* End Iphone 3 */
+
+/* Start Camera1 */
+.all-cameras {
+  max-height: 100vh;
+  max-width: 100%;
+  overflow: hidden;
+}
+.camera1 {
+  padding-top: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.all-cameras .camera1 .part1 {
+  width: 52%;
+  transform: translateX(-700px);
+  opacity: 0;
+  transition: all 1.5s ease;
+}
+.all-cameras .camera1 .part1.active {
+  transform: translateX(0);
+  opacity: 1;
+}
+.all-cameras .camera1 .part1 p {
+  font-size: 28px;
+  font-weight: 700;
+  width: 540px;
+  margin: 0 0 16px;
+  height: 330px;
+}
+.all-cameras .camera1 .part2 {
+  width: 48%;
+  margin-bottom: -3px;
+  transform: translateX(600px);
+  opacity: 0;
+  transition: all 1.5s ease;
+}
+.all-cameras .camera1 .part2.active {
+  transform: translateX(0);
+  opacity: 1;
+}
+/* End Camera1 */
+
+/* Start Camera2 */
+.all-cameras2 {
+  max-height: 100vh;
+  max-width: 100%;
+  overflow: hidden;
+  background-color: #000;
+}
+.camera2 {
+  padding-top: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.all-cameras2 .camera2 .part1 {
+  width: 52%;
+  padding-top: 95px;
+  padding-left: 15px;
+  letter-spacing: 0.8px;
+  transform: translateX(-700px);
+  opacity: 0;
+  transition: all 1.5s ease;
+}
+.all-cameras2 .camera2 .part1.active {
+  transform: translateX(0);
+  opacity: 1;
+}
+.all-cameras2 .camera2 .part1 h3 {
+  font-size: 28px;
+  margin: 0 0 48px;
+  padding: 0 0 8px;
+  color: #f6c408;
+  border-bottom: 1px solid #fff;
+  width: 330px;
+}
+.all-cameras2 .camera2 .part1 p {
+  font-size: 28px;
+  width: 540px;
+  margin: 0;
+  height: 330px;
+  line-height: 40px;
+}
+.all-cameras2 .camera2 .part2 {
+  width: 48%;
+  margin-bottom: -3px;
+  transform: translateX(600px);
+  opacity: 0;
+  transition: all 1.5s ease;
+}
+.all-cameras2 .camera2 .part2.active {
+  transform: translateX(0);
+  opacity: 1;
+}
+/* End Camera2 */
+
+/* Start camera 3 */
+.all-cameras3 {
+  background-color: #171515;
+  overflow: hidden;
+}
+/* End camera 3 */
+
+/* Start camera 4 */
+.all-cameras4 {
+  background-color: #000;
+  overflow: hidden;
+}
+/* End camera 4 */
+
+/* Start Apple Music */
+.apple-music {
+  background-image: linear-gradient(125deg, #f36c62, #bf4fd3);
+  overflow: hidden;
+}
+.apple-music .parts-music {
+  display: flex;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.apple-music .parts-music .part1 {
+  width: 50%;
+  display: flex;
+  margin: 0 15px;
+  flex-direction: column;
+  justify-content: center;
+  transform: translateX(-700px);
+  opacity: 0;
+  transition: all 1.5s ease;
+}
+.apple-music .parts-music .part1.active {
+  transform: translateX(0);
+  opacity: 1;
+}
+.apple-music .parts-music .part1 i {
+  font-size: 20px;
+  margin-right: 5px;
+}
+.apple-music .parts-music .part1 h5 {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0 0 8px;
+}
+.apple-music .parts-music .part1 div:first-of-type {
+  display: flex;
+}
+.apple-music .parts-music .part1 h2 {
+  width: 540px;
+  font-size: 67.5px;
+  font-weight: 500;
+  margin: 0 0 24px;
+}
+.apple-music .parts-music .part1 button {
+  width: 220px;
+  height: 65px;
+  margin-right: 48px;
+  border: 1px solid #fff;
+  border-radius: 30px;
+  font-size: 20px;
+  background: none;
+  color: #fff;
+}
+.apple-music .parts-music .part1 div:nth-child(3) {
+  transition: all 1.5 ease;
+  -webkit-animation: slide-in-bl 1.5s both;
+  animation: slide-in-bl 1.5s both;
+}
+@-webkit-keyframes slide-in-bl {
+  0% {
+    -webkit-transform: translateY(50px) translateX(-50px);
+    transform: translateY(50px) translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0) translateX(0);
+    transform: translateY(0) translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-bl {
+  0% {
+    -webkit-transform: translateY(50px) translateX(-50px);
+    transform: translateY(50px) translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0) translateX(0);
+    transform: translateY(0) translateX(0);
+    opacity: 1;
+  }
+}
+.apple-music .parts-music .part1 button:hover {
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+  transition: all 0.2s linear;
+  -webkit-animation: scale-down-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    both;
+  animation: scale-down-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+.apple-music .parts-music .part1 a {
+  color: #fff;
+  text-decoration: none;
+}
+.apple-music .parts-music .part1 a:hover {
+  text-decoration: underline;
+}
+.apple-music .parts-music .part2 {
+  width: 50%;
+  padding-left: 15px;
+  transform: translateX(600px);
+  opacity: 0;
+  transition: all 1.5s ease;
+}
+.apple-music .parts-music .part2 img {
+  width: 918px;
+  height: 500px;
+}
+.apple-music .parts-music .part2.active {
+  transform: translateX(0);
+  opacity: 1;
+}
+/* End Apple Music */
+
+/* Start Music Slider */
+.music-slider .container {
+  width: 1103px;
+}
+.music-slider .music {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.music-slider {
+  position: relative;
+  overflow: hidden;
+}
+.music-slider .music .part1 {
+  transform: translateY(-30px);
+  opacity: 0;
+  transition: all 1.5s ease;
+}
+.music-slider .music .part1.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+.music-slider .music .part1 ul {
+  list-style: none;
+  margin: 0 67px 0 30px;
+  padding: 0 0 48px;
+  display: flex;
+  justify-content: space-between;
+}
+.music-slider .music .part1 ul li {
+  padding-bottom: 7px;
+  transition: all 0.3s ease;
+}
+.music-slider .music .part1 ul li:hover {
+  color: #bf4fd3;
+  cursor: pointer;
+  border-bottom: 1px solid #bf4fd3;
+}
+.music-slider .music .part1 ul li.active {
+  color: #bf4fd3;
+  border-bottom: 1px solid #bf4fd3;
+}
+.music-slider .music .part2 {
+  overflow: hidden;
+  display: flex;
+  width: 1064px;
+  transform: translateY(310px);
+  opacity: 0;
+  transition: all 1.8s ease;
+}
+.music-slider .music .part2.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+.music-slider .music .part2 div {
+  padding: 0 8px;
+  display: none;
+}
+.music-slider .music .part2 div.active {
+  display: block;
+  animation: opacity 0.8s linear;
+}
+@keyframes opacity {
+  0% {
+    opacity: 0.1;
+  }
+  20% {
+    opacity: 0.2;
+  }
+  40% {
+    opacity: 0.4;
+  }
+  60% {
+    opacity: 0.6;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.music-slider .music .part2 img {
+  width: 200px;
+  height: 200px;
+}
+.music-slider .music .part2 h6:first-of-type {
+  font-size: 16px;
+  margin: 16px 0 4px;
+  font-weight: 500;
+}
+.music-slider .music .part2 h6:last-of-type {
+  font-size: 16px;
+  color: var(--main--p--color);
+  margin: 0 0 8px;
+  font-weight: 500;
+}
+/* End Music Slider */
+
+/* Start Airpods 1 */
+.airpods {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 600px;
+  background-color: #000;
+}
+.airpods-overlay {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.airpods .test {
+  display: flex;
+  align-content: center;
+}
+.airpods .air-pod {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  z-index: 3;
+}
+.airpods .air-pod .part1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.airpods .air-pod .part1 {
+  transform: translateY(-150px);
+  opacity: 0;
+  transition: all 1.5s ease;
+}
+.airpods .air-pod .part1.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+.airpods .air-pod .part1 h5 {
+  font-size: 20px;
+  margin: 0 0 8px;
+}
+.airpods .air-pod .part1 h2 {
+  padding: 0 0 8px;
+}
+.airpods .air-pod .part1 a {
+  font-size: 18px;
+  color: #007bff;
+  text-decoration: none;
+}
+.airpods .air-pod .part1 a:hover {
+  text-decoration: underline;
+}
+.airpods .air-pod .part2 {
+  transform: translateY(500px);
+  opacity: 0;
+  transition: all 1.5s ease;
+}
+.airpods .air-pod .part2.active {
+  transform: translateY(10px);
+  opacity: 1;
+}
+/* End Airpods 1 */
+
+/* start Airpods 2 */
+.airpods2 {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 411px;
+  background: url("../imgs/apple-music/desc-background.jpg") no-repeat center;
+  background-size: cover;
+  z-index: 3;
+}
+.airpods2-overlay {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 4;
+}
+.airpods2 .air-pod2 {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  position: relative;
+  z-index: 5;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+}
+.airpods2 .air-pod2 h5 {
+  font-size: 20px;
+  margin: 0 0 8px;
+}
+.airpods2 .air-pod2 h2 {
+  padding: 0 0 8px;
+}
+.airpods2 .air-pod2 a {
+  font-size: 18px;
+  color: #007bff;
+  text-decoration: none;
+}
+.airpods2 .air-pod2 a:first-of-type {
+  margin: 0 24px 0 0;
+}
+.airpods2 .air-pod2 a:hover {
+  text-decoration: underline;
+}
+.airpods2 .air-pod2 .part1 {
+  transform: translateX(-600px);
+  opacity: 0;
+  transition: all 1.8s ease;
+}
+.airpods2 .air-pod2 .part1.active {
+  transform: translateX(0);
+  opacity: 1;
+}
+.airpods2 .air-pod2 .part2 {
+  transform: translateX(600px);
+  opacity: 0;
+  transition: all 1.8s ease;
+}
+.airpods2 .air-pod2 .part2.active {
+  transform: translateX(0);
+  opacity: 1;
+}
+/* End Airpods 2 */
+
+/* Start Music App */
+.music-app {
+  overflow: hidden;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-color: #1c1c1c;
+}
+.music-app .part1 {
+  transform: translateY(-150px);
+  opacity: 0;
+  transition: all 1.5s ease;
+}
+.music-app .part1.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+.music-app .head h2 {
+  text-align: center;
+}
+.music-app .image {
+  background: url("../imgs/apple-music/creation-background.jpg") no-repeat
+    center;
+  background-size: cover;
+  width: 100%;
+  height: 500px;
+  margin-top: 50px;
+}
+.music-app .part2 {
+  transform: translateY(200px);
+  opacity: 0;
+  transition: all 1.5s ease;
+}
+.music-app .part2.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+.music-app .apps-item {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+.music-app .apps-item h4 {
+  font-size: 24px;
+  margin: 16px 0 8px;
+}
+.music-app .apps-item a {
+  font-size: 18px;
+  color: #007bff;
+  text-decoration: none;
+}
+.music-app .apps-item a:hover {
+  text-decoration: underline;
+}
+/* End Music App */
+
+/* Start Working With Aplle Music */
+.working {
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+  max-height: 100%;
+}
+.working .overlay {
+  position: absolute;
+  overflow: hidden;
+  background-color: #171515;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+}
+/* .working .part1 {
+  opacity: 0;
+} */
+.working .part1.active {
+  animation: opacity 1.5s linear;
+}
+.working .items {
+  position: relative;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  text-align: center;
+  z-index: 6;
+}
+.working .items p {
+  padding: 16px 0;
+  margin: 0;
+  color: var(--main--p--color);
+}
+.working .items a {
+  font-size: 18px;
+  color: #007bff;
+  text-decoration: none;
+}
+.working .items a:hover {
+  text-decoration: underline;
+}
+/* End Working With Aplle Music */
+
+/* Start Mac Section1 */
+.mac .overlay {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+.mac .section1 {
+  position: relative;
+  overflow: hidden;
+  background-color: #000;
+  height: 100vh;
+  z-index: 3;
+  padding: 140px 0 0;
+  text-align: center;
+}
+.mac .part1 {
+  transform: translateY(530px);
+  transition: all 1s ease;
+}
+.mac .part1.active {
+  transform: translateY(0);
+}
+.mac .section1 h2 {
+  font-size: 56px;
+}
+.mac .section1 h4 {
+  margin: 16px 0;
+  font-size: 24px;
+}
+.mac .section1 span {
+  color: var(--main--p--color);
+  display: block;
+}
+.mac .section1 a {
+  font-size: 18px;
+  color: #007bff;
+  text-decoration: none;
+  display: block;
+  margin: 16px auto 48px;
+  width: 120px;
+}
+.mac .section1 a:hover {
+  text-decoration: underline;
+}
+.mac .section1 .image {
+  background: url("../imgs/mac/mac-book-air.png") no-repeat center;
+  background-size: cover;
+  width: 100%;
+  height: 440px;
+  padding: 24px 0;
+}
+/* End Mac Section1 */
+
+/* Start Mac Section2 */
+.mac-section2 {
+  background-color: #1c1c1c;
+  overflow: hidden;
+}
+.mac-section2 .section2 {
+  padding: 80px 0;
+}
+.mac-section2 .part1 {
+  text-align: center;
+  transform: translateY(-150px);
+  opacity: 0;
+  transition: all 1.5s ease;
+}
+.mac-section2 .part1.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+.mac-section2 .part1 h2 {
+  font-size: 33px;
+  padding: 0 0 48px;
+}
+.mac-section2 .part2 {
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(500px);
+  opacity: 0;
+  transition: all 1.5s ease;
+}
+.mac-section2 .part2.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+.mac-section2 .part2 h4 {
+  font-size: 24px;
+  margin: 48px 0;
+}
+.mac-section2 .part2 ul {
+  list-style: none;
+  padding: 24px 0 16px;
+  margin: 0;
+  color: var(--main--p--color);
+}
+.mac-section2 .part2 ul li:not(:last-of-type) {
+  margin: 0 0 16px;
+}
+.mac-section2 .part2 a {
+  font-size: 18px;
+  color: #007bff;
+  text-decoration: none;
+  display: block;
+  width: 120px;
+}
+.mac-section2 .part2 a:hover {
+  text-decoration: underline;
+}
+/* End Mac Section2 */
+.what-mac {
+  background-color: #000;
+  overflow: hidden;
+}
+.what-mac .part1 {
+  font-size: 50px;
+  font-weight: 500;
+  padding: 48px 0;
+  text-align: center;
+}
+.what-mac .part1.active {
+  -webkit-animation: fade-in-left 1.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in-left 1.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+@-webkit-keyframes fade-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Start Macos */
+.macos {
+  background: url("../imgs/mac/macos-baackground.jpg") no-repeat center;
+  background-size: cover;
+  width: 100%;
+  overflow: hidden;
+}
+.macos .info {
+  padding: 150px 0;
+  text-align: center;
+}
+.macos .info .part1 h4 {
+  font-size: 24px;
+  font-weight: 500;
+  margin: 0 0 8px;
+  transform: translateY(-35px);
+  opacity: 0;
+  transition: all 1.5s ease;
+}
+.macos .info .part1.active h4 {
+  transform: translateY(0);
+  opacity: 1;
+}
+.macos .info .part1 h4 span {
+  font-size: 24px;
+  color: var(--main--p--color);
+}
+.macos .info .part1 h2 {
+  font-size: 65.5px;
+  transform: translateX(-600px);
+  opacity: 0;
+  transition: all 1.5s ease;
+}
+.macos .info .part1.active h2 {
+  transform: translateX(0);
+  opacity: 1;
+}
+.macos .info .part2 p {
+  padding: 0 0 16px;
+  margin: 0;
+  line-height: 1.5;
+  transform: translateX(600px);
+  opacity: 0;
+  transition: all 1.5s ease;
+}
+.macos .info .part2.active p {
+  transform: translateX(0);
+  opacity: 1;
+}
+.macos .info .part2 .link a {
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+}
+.macos .info .part2 .link {
+  transform: translateY(35px);
+  opacity: 0;
+  transition: all 1.5s ease;
+}
+.macos .info .part2.active .link {
+  transform: translateY(0);
+  opacity: 1;
+}
+.macos .info .part2 a:hover {
+  text-decoration: underline;
+}
+/* End Macos */
+
+/* Start Desc */
+.desc {
+  width: 100%;
+  background-color: #1c1c1c;
+  overflow: hidden;
+}
+.desc .info {
+  padding: 100px 0;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.desc .info div {
+  padding: 0 15px;
+}
+.desc .info .part1 {
+  transform: translateX(-700px);
+  opacity: 0;
+  transition: all 1.5s ease;
+}
+.desc .info .part1.active {
+  transform: translateX(0);
+  opacity: 1;
+}
+.desc .info .part2 {
+  transform: translateX(600px);
+  opacity: 0;
+  transition: all 1.5s ease;
+}
+.desc .info .part2.active {
+  transform: translateX(0);
+  opacity: 1;
+}
+.desc .info h2 {
+  font-weight: 500;
+}
+.desc .info p {
+  margin: 0 0 16px;
+  line-height: 1.5;
+  color: var(--main--p--color);
+}
+.desc .info a {
+  font-size: 18px;
+  color: #007bff;
+  text-decoration: none;
+  display: block;
+  width: 120px;
+  margin: 0 auto;
+}
+.desc .info a:hover {
+  text-decoration: underline;
+}
+.desc .info img {
+  margin-top: 55px;
+}
+/* End Desc */
+
+/* Start Apps Container */
+.apps-container,
+.pro-apps-container {
+  background-color: #000000;
+  overflow: hidden;
+  min-height: 128vh;
+  -webkit-animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+.pro-apps-container {
+  background-color: #171515;
+}
+.apps-container .info,
+.pro-apps-container .info {
+  padding: 70px 0;
+  text-align: center;
+}
+.apps-container .info .paragraph,
+.pro-apps-container .info .paragraph {
+  padding: 16px 0;
+  margin: 0;
+  color: var(--main--p--color);
+  line-height: 1.5;
+}
+.apps-container .info ul,
+.pro-apps-container .info ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0 0 16px;
+  padding: 16px 0 0;
+}
+.apps-container .info ul li,
+.pro-apps-container .info ul li {
+  width: 140px;
+  height: 160px;
+  background-color: #1c1c1c;
+  cursor: pointer;
+  border-radius: 10px;
+  margin: 0 8px 24px;
+  filter: grayscale(1);
+  transition: all 0.3s ease;
+}
+.apps-container .info ul li.active,
+.pro-apps-container .info ul li.active {
+  box-shadow: 0 12px 15px -10px rgb(102 102 102 / 80%);
+  filter: grayscale(0);
+}
+.apps-container .info ul li:hover,
+.pro-apps-container .info ul li:hover {
+  box-shadow: 0 12px 15px -10px rgb(102 102 102 / 80%);
+  filter: grayscale(0);
+}
+.apps-container .info ul li img {
+  margin-top: 38.5px;
+}
+.apps-container .info ul li h6,
+.pro-apps-container .info ul li h6 {
+  margin: 16px 0 8px;
+  font-size: 16px;
+  font-weight: 500;
+}
+.apps-container .info .my-paragraph,
+.pro-apps-container .info .my-paragraph {
+  position: relative;
+  margin: 0 215px;
+}
+.apps-container .info .my-paragraph .paragraph1,
+.pro-apps-container .info .my-paragraph .paragraph1 {
+  position: absolute;
+  display: none;
+  max-width: 100%;
+  -webkit-animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.apps-container .info .my-paragraph div.active,
+.pro-apps-container .info .my-paragraph div.active {
+  display: block;
+}
+.apps-container .info .my-paragraph p,
+.pro-apps-container .info .my-paragraph p {
+  color: var(--main--p--color);
+  line-height: 1.5;
+  margin: 0 auto;
+}
+.apps-container .info .my-paragraph a {
+  color: #007bff;
+  text-decoration: none;
+  display: block;
+  width: 220px;
+  margin: 16px auto 0;
+}
+.apps-container .info a:hover {
+  text-decoration: underline;
+}
+.apps-container .info .my-paragraph .main-image,
+.pro-apps-container .info .my-paragraph .main-image {
+  display: flex;
+  justify-content: center;
+}
+.apps-container .info .my-paragraph .main-image img,
+.pro-apps-container .info .my-paragraph .main-image img {
+  width: 1110px;
+  height: 624.38px;
+}
+/* End Apps Container */
+
+/* Start Footer */
+.footer {
+  background-color: #000000;
+  overflow: hidden;
+}
+.footer .container {
+  padding: 3rem 15px 0;
+}
+.footer .head,
+.footer .head div:first-of-type,
+.footer .body,
+.footer .copy,
+.footer .copy ul {
+  display: flex;
+}
+.footer .head {
+  justify-content: space-between;
+  margin-bottom: 48px;
+  width: 1110px;
+}
+.footer .head div:first-of-type i {
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+}
+.footer .head div:first-of-type h5 {
+  margin: 0 0 0 10px;
+  font-size: 20px;
+  font-weight: 500;
+}
+.footer .head .go-up {
+  width: 40px;
+  height: 40px;
+  margin: 0 20px 0 0;
+  background-color: #171515;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 1.5s linear;
+}
+.footer .head .go-up:hover {
+  background-color: #fff;
+  color: #000;
+}
+.footer .body {
+  justify-content: space-between;
+}
+.footer .body div:first-of-type {
+  padding: 0;
+}
+.footer .body div {
+  width: 285px;
+  height: 280px;
+  padding: 0 15px;
+  margin: 0 0 8px;
+}
+.footer .body ul {
+  list-style: none;
+  padding: 0;
+}
+.footer .body ul li:first-of-type {
+  color: #fff;
+  font-weight: 700;
+}
+.footer .body ul li {
+  margin: 16px 0;
+  color: #ffffff80;
+  transition: all 0.2s linear;
+}
+.footer .body ul li:not(:first-of-type):hover {
+  cursor: pointer;
+  color: #fff;
+}
+.footer .link {
+  display: flex;
+  justify-content: space-between;
+  margin: 48px 0 8px 0;
+}
+.footer .link p {
+  color: #007bff;
+  cursor: pointer;
+}
+.footer .link p:first-of-type:hover {
+  text-decoration: underline;
+}
+.footer .copy {
+  justify-content: space-between;
+  margin: 0 0 4px;
+  padding: 24px 0 0;
+  border-top: 1px solid #333;
+}
+.footer .copy p {
+  color: var(--main--p--color);
+  margin: 0;
+  padding: 0 0 15px 0;
+}
+.footer .copy ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.footer .copy ul li {
+  margin: 0 16px 0 0;
+  color: var(--main--p--color);
+  transition: all 0.2s linear;
+}
+.footer .copy ul li:hover {
+  cursor: pointer;
+  color: #fff;
+}
+
+/* End Footer */
